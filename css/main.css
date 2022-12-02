@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(/assets/top_backgroung.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  padding-bottom: 500px;
+  max-height: max-content;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#logo_on_top {
+  position: absolute;
+  left: 20px;
+  padding-right: 30px;
+}
+
+#logo_on_top img {
+  width: 100%;
+  height: auto;
+}
+
+#Header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url(/assets/Rectangle1.png);
+  margin-top: 40px;
+  align-items: center;
+}
+
+#link {
+  position: relative;
+  left: 750px;
+  display: flex;
+  padding-left: 100px;
+
+  font-family: "hamburg serial", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#Header #Navigation ul {
+  list-style-type: none;
+  margin: 10px;
+  padding-left: 100px;
+  /* overflow: hidden; */
+  display: inline-block;
+}
+
+#Header #Navigation li {
+  float: left;
+}
+
+#Header #Navigation li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 40px;
+  text-decoration: none;
+}
+
+#Header #Navigation li a:hover {
+  background-color: rgb(71, 69, 69);
+}
+
+#slogan {
+  position: relative;
+  bottom: -450px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 175px;
+  margin-bottom: 40px;
+}
+
+#slogan h1 {
+  margin-top: 1px;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  font-family: "hamburg serial", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-size: 79px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+#slogan h3 {
+  margin-bottom: 1px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 51px;
+  font-weight: 800;
+  font-family: "hamburg serial", sans-serif;
+  text-transform: uppercase;
+}
+
+#slogan img {
+  padding-top: 10px;
+}
+
+/* services section */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(/assets/Rectangle2.png);
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 350px;
+}
+
+#services {
+  position: relative;
+  bottom: -200px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+#services-title {
+  position: relative;
+  bottom: -100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#services-title h1 {
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 1);
+  font-size: 45px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+#services-title h3 {
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 1);
+  font-size: 25px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.services-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: auto;
+  float: right;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.services-img h3 {
+  color: white;
+  text-transform: uppercase;
+}
+/* article  section */
+
+.article-section {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 400px;
+}
+#article_row {
+  display: flex;
+  margin-top: 200px;
+}
+
+article {
+  max-width: 800px;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+article h1 {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+article h3 {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+article p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* produc  section */
+
+.products-section {
+  display: flex;
+  background-color: #ff7630;
+  padding-bottom: 400px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#product_head {
+  position: relative;
+  bottom: -100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#product_head h1 {
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+#product_head h4 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.cut-line::before {
+  content: "\a";
+  white-space: nowrap;
+}
+
+#product_separator {
+  position: relative;
+  bottom: -150px;
+}
+
+#img_row {
+  position: relative;
+  bottom: -200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.product-img {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.product-description {
+  position: relative;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+#img_text {
+  display: flex;
+  position: relative;
+  bottom: -10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-description h3 {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.product-description p {
+  margin: 0px;
+}
+#button {
+  position: relative;
+  bottom: -300px;
+  display: flex;
+}
+
+#button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/*contac us */
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 400px;
+}
+
+#contact_head {
+  position: relative;
+  bottom: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact_head h1 {
+  color: rgba(255, 118, 48, 1);
+  font-weight: 900;
+  font-size: 45px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+#contact_head h2 {
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+form {
+  position: relative;
+  bottom: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+
+form label {
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+#name {
+  width: 498px;
+  height: 52px;
+  margin-bottom: 10px;
+}
+
+#email {
+  width: 498px;
+  height: 52px;
+  margin-bottom: 10px;
+}
+
+input {
+  border-color: grey;
+}
+
+input[type="tel"] {
+  width: 250;
+  height: 52px;
+}
+
+#phone_number {
+  position: relative;
+  right: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 250;
+}
+
+#language_div {
+  width: 239px;
+  height: 52px;
+}
+
+::placeholder {
+  position: relative;
+  left: 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+#language_div {
+  position: relative;
+  top: -4px;
+  left: 30px;
+}
+
+select {
+  width: 250px;
+  height: 52px;
+}
+
+select:focus {
+  min-width: 250px;
+  width: auto;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  padding-bottom: 300px;
+}
+.form-row {
+  display: flex;
+}
+
+#submit {
+  position: relative;
+  top: -250px;
+  display: flex;
+}
+
+#submit:hover {
+  background-color: gray;
+}
+/*since */
+
+.since-section {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  color: rgba(255, 118, 48, 1);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.since-section h1 {
+  font-weight: 900;
+  font-size: 45px;
+}
+
+#group_img {
+  margin: 40px;
+}
+
+/*office section */
+
+.office-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.office-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.office-section h4 {
+  color: rgba(255, 118, 48, 1);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+}
+
+.office-section h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0;
+}
+
+#us_office {
+  display: flex;
+  float: inline-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 200px;
+}
+
+#cad_office {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 200px;
+}
+
+#copyrights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -28,6 +28,7 @@ body {
 
 /* mobile style  */
 .top-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -38,16 +39,39 @@ body {
   background-size: cover;
   background-color: var(--primary);
 }
+#desktop_nav_container {
+  display: none;
+}
+
+#mobile_nav_container {
+  width: 100%;
+  height: 80px;
+  background: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-image: url(/assets/Rectangle1.png);
+  z-index: 10;
+}
 
 nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  height: 200px;
+  z-index: 10;
 }
 
 .logo_on_top {
   position: absolute;
+  left: 20px;
+  top: 40px;
   padding-right: 10px;
+  z-index: 11;
   /* height: 37px; */
 }
 
@@ -55,58 +79,12 @@ nav {
   width: 45%;
   height: auto;
 }
-
-#Header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-image: url(/assets/Rectangle1.png);
-
-  margin-top: 0px;
-  align-items: center;
-}
-
-/* #link {
-  position: relative;
-  left: 750px;
-  display: flex;
-  padding-left: 100px;
-
-  font-family: "hamburg serial", sans-serif;
-  color: rgba(255, 255, 255, 1);
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-#Header #Navigation ul {
-  list-style-type: none;
-  margin: 10px;
-  padding-left: 100px;
-  overflow: hidden;
-  display: inline-block;
-}
-
-#Header #Navigation li {
-  float: left;
-}
-
-#Header #Navigation li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 40px;
-  text-decoration: none;
-}
-
-#Header #Navigation li a:hover {
-  background-color: rgb(71, 69, 69);
-} */
-
+/* s */
 #slogan {
   position: relative;
-  bottom: -75px;
+  bottom: -70px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin-top: 175px;
@@ -114,6 +92,7 @@ nav {
 }
 
 #slogan h1 {
+  position: relative;
   margin-top: 1px;
   margin-bottom: 5px;
   font-weight: bolder;
@@ -121,7 +100,7 @@ nav {
   color: rgba(255, 255, 255, 1);
   font-size: 48px;
   font-weight: 900;
-  text-align: center;
+
   text-transform: uppercase;
 }
 
@@ -130,12 +109,114 @@ nav {
   color: rgba(255, 255, 255, 1);
   font-size: 28px;
   font-weight: 800;
+  font-family: "hamburg serial", sans-serif;
   text-transform: uppercase;
 }
 
 #slogan img {
-  padding-top: 30px;
+  padding-top: 10px;
 }
+
+/* # mobbile hamburger link  */
+
+.menu-items {
+  position: relative;
+
+  background-color: rgba(0, 0, 0, 0.69);
+  z-index: 10;
+  height: 260px;
+  width: 390px;
+  top: 110px;
+  border-radius: 0px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.menu-items li {
+  color: white;
+  padding: 0.5rem;
+  border-top: 1px solid white;
+}
+#li_line_bottom {
+  border-bottom: 1px solid white;
+}
+
+.menu-items li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-items li a:hover {
+  color: rgb(174, 174, 174);
+}
+
+.check {
+  background-color: #ff7630;
+  position: absolute;
+  top: 40px;
+  left: 340px;
+  height: 15px;
+  width: 15px;
+  opacity: 0;
+  z-index: 90;
+}
+
+.check:hover {
+  cursor: pointer;
+}
+
+.ham-menu {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  padding: 0.5rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0, 0);
+  border-radius: 0.25em;
+  align-items: flex-start;
+}
+
+.ham-menu .line {
+  background-color: white;
+  border-radius: 1em;
+  width: 15px;
+  height: 2px;
+}
+
+.ham-menu .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 100ms ease-in-out;
+}
+
+.ham-menu .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 100ms ease-in-out;
+}
+/* 
+.check:checked ~ .ham-menu .line1 {
+  display: block;
+  transform: rotate(45deg);
+}
+
+.check:checked ~ .ham-menu .line2 {
+  opacity: 0;
+}
+
+.check:checked ~ .ham-menu .line3 {
+  display: block;
+  transform: rotate(-45deg);
+} */
 
 /*mobile style   services section */
 
@@ -340,21 +421,42 @@ article p {
   margin: 0px;
 }
 
-#button {
-  background-image: url(/assets/Rectangle1.png);
-  position: fixed;
-  top: 850px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-height: 150px;
-  display: block;
+#button_download_desktop {
+  display: none;
 }
 
-#button img {
-  padding-left: 50px;
-  padding-top: 20px;
-  margin-bottom: 10px;
+#button_download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/assets/Rectangle1.png);
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+
+.button {
+  text-transform: uppercase;
+  color: white;
+  border: 3px solid #ffffff;
+  background: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  height: 50px;
+  width: 294px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: black;
 }
 
 /*mobile contac us */
@@ -396,7 +498,6 @@ form {
   flex-direction: column;
   align-items: center;
   height: 400px;
-  padding: 40px 40px;
 }
 
 form label {
@@ -446,8 +547,8 @@ select {
 }
 
 select:focus {
-  min-width: 230px;
-  width: auto;
+  width: 342px;
+  height: 56px;
 }
 
 fieldset {
@@ -465,9 +566,8 @@ fieldset {
 
 #submit {
   display: flex;
+  margin-top: 40px;
   width: 330px;
-
-  padding-top: 40px;
 }
 
 input[type="image" i] {
@@ -559,7 +659,6 @@ input[type="image" i] {
   margin-top: 40px;
   margin-bottom: 75px;
 }
-
 /* large tablet & laptop styles */
 @media screen and (min-width: 960px) {
 }
@@ -577,31 +676,35 @@ input[type="image" i] {
     max-height: max-content;
   }
 
-  nav {
+  #mobile_nav_container {
+    display: none;
+  }
+
+  #desktop_nav_container {
+    display: block;
+  }
+
+  #desktop_nav {
+    position: relative;
+    top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 68px;
+    background-image: url(/assets/Rectangle2.png);
   }
 
-  #logo_on_top {
+  .logo_on_top {
     position: absolute;
+    top: 20px;
     left: 20px;
     padding-right: 30px;
+    z-index: 100;
   }
 
-  #logo_on_top img {
+  .logo_on_top img {
     width: 100%;
-    height: auto;
-  }
-
-  #Header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-image: url(/assets/Rectangle1.png);
-
-    margin-top: 40px;
-    align-items: center;
+    height: 86px;
   }
 
   #link {
@@ -617,7 +720,7 @@ input[type="image" i] {
     font-weight: 700;
   }
 
-  #Header #Navigation ul {
+  #link ul {
     list-style-type: none;
     margin: 10px;
     padding-left: 100px;
@@ -625,11 +728,11 @@ input[type="image" i] {
     display: inline-block;
   }
 
-  #Header #Navigation li {
+  #link li {
     float: left;
   }
 
-  #Header #Navigation li a {
+  #link li a {
     display: block;
     color: white;
     text-align: center;
@@ -637,7 +740,7 @@ input[type="image" i] {
     text-decoration: none;
   }
 
-  #Header #Navigation li a:hover {
+  #link li a:hover {
     background-color: rgb(71, 69, 69);
   }
 
@@ -691,8 +794,9 @@ input[type="image" i] {
   #services {
     position: relative;
     bottom: -200px;
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   #services-title {
@@ -865,14 +969,16 @@ input[type="image" i] {
   .product-description p {
     margin: 0px;
   }
-  #button {
-    position: relative;
-    bottom: -300px;
-    display: flex;
+
+  #button_download {
+    display: none;
   }
 
-  #button:hover {
-    background-color: gray;
+  #button_download_desktop {
+    display: block;
+    position: relative;
+    bottom: -300px;
+    right: 10px;
   }
 
   /*contac us */
@@ -923,9 +1029,11 @@ input[type="image" i] {
   }
 
   #name {
-    width: 498px;
     height: 52px;
-    margin-bottom: 10px;
+    width: 498px;
+    left: 0px;
+    top: 18px;
+    border-radius: 0px;
   }
 
   #email {
@@ -935,12 +1043,21 @@ input[type="image" i] {
   }
 
   input {
-    border-color: grey;
+    width: 498px;
+    height: 52px;
+    margin-bottom: 10px;
+    border: 1px solid #a0a0a0;
+    color: #000000;
+    padding: 0;
   }
 
   input[type="tel"] {
     width: 250;
     height: 52px;
+  }
+  .form-botom-element {
+    display: flex;
+    flex-direction: row;
   }
 
   #phone_number {
@@ -950,6 +1067,13 @@ input[type="image" i] {
     flex-direction: column;
     align-items: flex-start;
     width: 175px;
+  }
+  #phone {
+    height: 52px;
+    width: 236px;
+    left: 0px;
+    top: 18px;
+    border-radius: 0px;
   }
 
   #language_div {
@@ -971,13 +1095,20 @@ input[type="image" i] {
   }
 
   select {
-    width: 230px;
-    height: 56px;
+    height: 52px;
+    width: 236px;
+    left: 0px;
+    top: 18px;
+    border-radius: 0px;
+    background: none;
   }
 
   select:focus {
-    min-width: 230px;
-    width: auto;
+    height: 52px;
+    width: 236px;
+    left: 0px;
+    top: 18px;
+    border-radius: 0px;
   }
 
   fieldset {
@@ -990,11 +1121,29 @@ input[type="image" i] {
   .form-row {
     display: flex;
   }
-
+  .buttonHolder {
+    text-align: center;
+  }
   #submit {
     position: relative;
-    top: -250px;
-    display: flex;
+    bottom: -40px;
+    height: 50px;
+    width: 498px;
+    border-radius: 0px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 0px;
+    /* identical to box height, or 122% */
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+
+    /* Sublight Engines/Black */
+
+    color: #000000;
   }
 
   #submit:hover {
@@ -1027,12 +1176,7 @@ input[type="image" i] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 100px;
-  }
-
-  .office-section {
-    display: flex;
-    flex-direction: row;
+    height: 255px;
   }
 
   .office-section h4 {
@@ -1066,8 +1210,11 @@ input[type="image" i] {
   }
 
   #copyrights {
+    position: relative;
+    bottom: -50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
   }
 }

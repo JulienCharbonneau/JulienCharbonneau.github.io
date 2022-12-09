@@ -11,15 +11,55 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<!-- <script type="text/javascript">
+   (function(){
+      emailjs.init("UqxJU2Ws0Yc0AT-1U");
+   })();
+</script> -->
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation mobile Bar -->
+    <div id="mobile_nav_container">
+    <nav id="navigation_mobile">
+      <div class="logo_on_top">
+        <img src="/assets/logo/logo_sublight.png" />
+      </div>
+      <div id="link">
+        <input type="checkbox" name="" id="ham_menu" class="check">
+      <ul id="menu_link" class="menu-items" style="display: none;">
+        <li>
+
+          <a href="#services-title"> OUR services </a>
+        </li>
+        <li>
+          <a href="#product_head"> OUR PROUDUCTS </a>
+        </li>
+        <li>
+          <a href="#about_us"> about us </a>
+        </li>
+        <li id="li_line_bottom">
+          <a href="#contact_head"> contact us </a>
+        </li>
+      </ul>
+      <div class="ham-menu">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+    </div>
+    </nav>
+</div>
+    <!-- top section -->
     <section class="top-section">
-      <div id="Header">
+      <!-- navigation full desktop -->
+      <div id="desktop_nav_container">
         <div class="logo_on_top">
           <img src="/assets/logo/logo_sublight.png" />
         </div>
-        <nav id="Navigation">
+        <nav id="desktop_nav">
           <div id="link">
           <ul id="">
             <li>
@@ -154,10 +194,11 @@
           </div>
       </div>
     </div>
-    <div id="button" onclick="alert('Features will be coming soon. Please come back later')">
-      <img src="/assets/icon/outline.png">
-    </div>
-
+    <div id="button_download_desktop">
+      <button type="button"class="button" onclick="alert('Features will be coming soon. Please come back later')">
+        Download our catalog
+      </button>
+  </div>
 
 
     </section>
@@ -218,9 +259,9 @@
            </div>
           </div>
         </div>
-        <div id="submit">
-          <input type="image" src="/assets/icon/submit.png" name="saveForm" class="btTxt submit" id="saveForm" />    
-        </div>
+        <!-- <div class="buttonHolder"> -->
+          <input type="image" src="/assets/icon/submit.png" name="saveForm" class="btTxt submit" id="submit" onclick="senMail()"/>    
+        <!-- </div> -->
       </fieldset>
         </form>
     </section>
@@ -251,7 +292,14 @@
     <section id="copyrights">
     <div id="copyrights"><p>All rights reserved to CodeBoxx Solutions ©, 2022.</p></div>
   </section>
+
+  <!-- bottom button -->
+  <div id="button_download">
+    <button type="button"class="button" onclick="alert('Features will be coming soon. Please come back later')">
+      Download our catalog
+    </button>
+  </div>
     <!-- SCRIPTS -->
-    <script src="" async defer></script>
+    <script src="/js/main.js" async defer></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-section {
+  margin: 20px;
+  height: auto;
+}
+
+.top-section h2 {
+  padding-bottom: 20px;
+}
+
+.InterventionCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+  width: 75%;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+h2 {
+  color: red;
+}
